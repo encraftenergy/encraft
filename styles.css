@@ -15,7 +15,7 @@ body {
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -10327,4 +10327,24 @@ html {
     .map-iframe-container iframe {
         height: 300px;
     }
+}
+
+/* Styles for disabled links */
+.document-link-new.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: #f5f5f5;
+    color: #999;
+    border: 1px solid #ddd;
+}
+
+.document-link-new.disabled:hover {
+    background: #f5f5f5;
+    color: #999;
+    transform: none;
+}
+
+.document-link-new.disabled i {
+    color: #999;
 }
