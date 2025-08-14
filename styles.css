@@ -32,9 +32,9 @@ body {
 }
 
 .nav-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,13 +51,15 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-link {
     color: #cccccc;
     text-decoration: none;
     font-weight: 400;
+    font-size: 0.9rem;
+    white-space: nowrap;
     transition: color 0.3s ease;
     position: relative;
 }
@@ -324,6 +326,21 @@ body {
 }
 
 /* Responsive Design */
+/* Medium screens navigation adjustment */
+@media (max-width: 1200px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -10347,4 +10364,208 @@ html {
 
 .document-link-new.disabled i {
     color: #999;
+}
+
+/* Elektrobezpeka Styles - Using existing design patterns */
+
+/* Emergency Section */
+.emergency-section {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+}
+
+.emergency-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.emergency-card-new {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.emergency-card-new::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    transition: all 0.3s ease;
+}
+
+.emergency-card-new.fire::before {
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+.emergency-card-new.police::before {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+.emergency-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border-color: #555;
+}
+
+.emergency-icon-new {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 2rem;
+}
+
+.emergency-card-new.fire .emergency-icon-new {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #ffffff;
+}
+
+.emergency-card-new.police .emergency-icon-new {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: #ffffff;
+}
+
+.emergency-content h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.emergency-content p {
+    color: #cccccc;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.emergency-number-new {
+    background: linear-gradient(135deg, #ffd700, #f39c12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Safety specific styles for document items */
+.safety-step-item {
+    transition: all 0.3s ease;
+}
+
+.safety-step-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.safety-step-item.emergency {
+    border-left: 4px solid #e74c3c;
+    background: linear-gradient(135deg, #2c1810 0%, #3c1f15 100%);
+}
+
+.safety-step-item.emergency:hover {
+    border-left-color: #c0392b;
+}
+
+.document-badge-new.emergency {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.emergency-highlight {
+    color: #e74c3c;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Contact specific styles */
+.contact-item {
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #27ae60;
+}
+
+.document-badge-new.contact {
+    background: linear-gradient(135deg, #27ae60, #229954);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Requirement specific styles */
+.requirement-item {
+    transition: all 0.3s ease;
+}
+
+.requirement-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.important-notice-item {
+    border-left: 4px solid #f39c12;
+    background: linear-gradient(135deg, #2c2416 0%, #3c2f1a 100%);
+    transition: all 0.3s ease;
+}
+
+.important-notice-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-left-color: #e67e22;
+}
+
+.document-badge-new.important {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Enhanced link styles for elektrobezpeka */
+.document-link-new {
+    transition: all 0.3s ease;
+}
+
+.document-link-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Elektrobezpeka */
+@media (max-width: 768px) {
+    .emergency-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .emergency-card-new {
+        padding: 2rem 1.5rem;
+    }
+    
+    .emergency-icon-new {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .emergency-number-new {
+        font-size: 2.5rem;
+    }
 }
