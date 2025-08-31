@@ -10176,6 +10176,90 @@ html {
     font-size: 1rem;
 }
 
+/* Buildings Information Section */
+.buildings-info-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.building-info-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 40px;
+    border: 1px solid #333;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.building-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.building-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.building-detail i {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    min-width: 24px;
+}
+
+.building-detail div {
+    flex: 1;
+}
+
+.building-detail strong {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.building-detail p {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.building-detail p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .building-info-card {
+        padding: 25px;
+        margin-top: 30px;
+    }
+    
+    .building-details {
+        gap: 20px;
+    }
+    
+    .building-detail {
+        gap: 15px;
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .building-detail i {
+        align-self: center;
+    }
+}
+
 /* Map Section - New Design */
 .map-section-new {
     padding: 120px 0;
