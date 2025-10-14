@@ -9170,6 +9170,233 @@ html {
 
 /* ===== NEW DOCUMENTS PAGE DESIGN ===== */
 
+/* Company Activity Section */
+.company-activity-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    position: relative;
+}
+
+.company-activity-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.1;
+}
+
+.activity-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.activity-text {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.activity-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.principles-section {
+    margin-bottom: 4rem;
+}
+
+.principles-section h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.principles-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border-radius: 2px;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.principle-item {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.principle-item:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
+    border-color: rgba(76, 175, 80, 0.3);
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.1);
+}
+
+.principle-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.principle-item:hover .principle-icon {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+}
+
+.principle-icon i {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.principle-content h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.principle-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.mission-section {
+    text-align: center;
+    background: linear-gradient(145deg, rgba(76, 175, 80, 0.05), rgba(76, 175, 80, 0.02));
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.mission-section h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.mission-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border-radius: 2px;
+}
+
+.mission-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive Design for Company Activity Section */
+@media (max-width: 768px) {
+    .company-activity-section {
+        padding: 60px 0;
+    }
+    
+    .activity-content {
+        padding: 0 1rem;
+    }
+    
+    .activity-text p {
+        font-size: 1.1rem;
+    }
+    
+    .principles-section h3 {
+        font-size: 2rem;
+    }
+    
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .principle-item {
+        padding: 1.5rem;
+    }
+    
+    .mission-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .mission-section h3 {
+        font-size: 1.8rem;
+    }
+    
+    .mission-section p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-activity-section {
+        padding: 40px 0;
+    }
+    
+    .principles-section h3 {
+        font-size: 1.8rem;
+    }
+    
+    .principle-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .principle-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .principle-content h4 {
+        font-size: 1.2rem;
+    }
+    
+    .mission-section h3 {
+        font-size: 1.6rem;
+    }
+}
+
 /* Documents Hero Section - New Design */
 .documents-hero-new {
     position: relative;
