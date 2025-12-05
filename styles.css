@@ -10628,6 +10628,136 @@ html {
 }
 
 /* Contact Form Section - New Design */
+/* Trading Buildings Section */
+.trading-buildings-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    position: relative;
+}
+
+.trading-buildings-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.trading-building-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.trading-building-card:hover {
+    background: linear-gradient(145deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
+    border-color: rgba(76, 175, 80, 0.3);
+    box-shadow: 0 15px 35px rgba(76, 175, 80, 0.1);
+}
+
+.building-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.building-header i {
+    font-size: 2rem;
+    color: #4CAF50;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.building-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.building-address {
+    padding-left: 1rem;
+}
+
+.building-address strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.building-address p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0;
+}
+
+/* Responsive Design for Trading Buildings Section */
+@media (max-width: 768px) {
+    .trading-buildings-section {
+        padding: 60px 0;
+    }
+    
+    .trading-buildings-content {
+        padding: 0 1rem;
+    }
+    
+    .trading-building-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .building-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .building-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .building-address {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .trading-buildings-section {
+        padding: 40px 0;
+    }
+    
+    .trading-building-card {
+        padding: 1.5rem;
+    }
+    
+    .building-header i {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .building-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .building-address strong,
+    .building-address p {
+        font-size: 1rem;
+    }
+}
+
 .contact-form-section-new {
     padding: 120px 0;
     background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
